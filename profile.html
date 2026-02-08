@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="shortcut icon" href="icons/images.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="home.html"><img src="images/ULAB-logo.webp" alt="ULAB Logo" height="40"></a>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="profile.html" class="active">Profile</a>
+            <a href="about.html">About</a>
+            <a href="policy.html">Policy</a>
+            <!-- <a href="register.html">Register</a> -->
+            <!-- <a href="login.html">Login</a> -->
+            <a href="#" onclick="logout()">Log out</a>
+        </div>
+    </nav>
+
+    <!-- Main Image Banner -->
+    <div class="main-banner text-center">
+        <img src="images/ulab_picture.jpg" alt="Campus">
+    </div>
+
+    <div class="header">
+        <h2>My Profile</h2><br>
+        <p>
+            <strong>Semester:</strong> 261 (<i>Spring 2026</i>)
+            <strong>Student:</strong> 233014214 Md. Tariqul Islam
+        </p>
+        <p>
+            <strong>Adviser:</strong> Ms. Jannatul Ferdous Ruma
+            <strong>Email:</strong> jannatul.ferdous1@ulab.edu.bd
+        </p>
+    </div>
+
+    <div class="profile-container">
+
+        <div class="left-section">
+            <div class="image">
+                <img src="images/profile.jpg" alt="Profile Picture">
+            </div>
+
+            <div class="text-section">
+                <h2 class="name">Md. Tariqul Islam</h2> <br>
+                <h3 class="student-id"><span class="id">ID:</span>233014214</h3> <br>
+                <p class="department">CSE</p>
+            </div>
+        </div>
+
+        <div class="right-section">
+
+            <div class="info-grid">
+                <div class="info-left">
+                    <p><strong>Tel/Mobile:</strong> 01798845995</p>
+                    <p><strong>ULAB Mail:</strong> tariqul.islam.cse@ulab.edu.bd</p>
+                    <p><strong>Personal Mail:</strong> tariqul.soykot.001@gmail.com</p>
+
+                    <p class="address">
+                        <strong>Present Address:</strong><br>
+                        Road: Road-1, Aram Housing, Bosila<br>
+                        House: 11<br>
+                        Thana: Mohammadpur<br>
+                        Dist: DHAKA<br>
+                        Post Code: 1207<br>
+                        Bangladesh
+                    </p>
+                </div>
+
+                <div class="info-right">
+                    <p><strong>Active Status:</strong> <span class="status active">Active</span></p>
+                    <p><strong>Payment Status:</strong> <span class="status ok">Ok</span></p>
+                    <p><strong>Registration Status:</strong> <span class="status complete">Complete</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cg-btn" id="cg-count-btn">
+            <button class="btn btn-success mt-2">Wanna analysis cg for next Semester?</button>
+        </div>
+
+    </div>
+
+    <div class="cg-count" id="cg-count-parent" >
+    
+        <p class="hhh">Want some headache?</p><br><br><br>
+
+        <p><span class="dis">Disclaimer</span>:<br>This CGPA Prediction System is designed to help students estimate the GPA they need in an upcoming semester
+        to achieve a desired cumulative grade point average (CGPA). The result shown by this tool is a mathematical prediction,
+        not an official academic guarantee.This prediction is informational and should not be treated as an official CGPA
+        calculation. Students are encouraged to consult their academic advisors for final decisions.
+        </p>
+
+        <div class="form-container">
+            <h2 style="text-align:center; color:#0073e6;">Input Info</h2>
+        
+            <form onsubmit="calculateCGPA(); return false;">
+                <label>Completed Credit Hours:</label>
+                <input type="number" id="credit" placeholder="Enter Your Completed Credit Hours" required>
+        
+                <label>Last CGPA:</label>
+                <input type="number" step="0.01" id="last_cgpa" placeholder="Enter your Last CGPA" required>
+        
+                <label>Upcoming Semester Credit Hours:</label>
+                <input type="number" id="upcoming_credit" placeholder="Enter Upcoming Semester Credit Hours" required>
+        
+                <label>Target CGPA:</label>
+                <input type="number" step="0.01" id="target_cgpa" placeholder="Enter what you are expecting" required>
+        
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+        
+        <!-- Result Popup -->
+        <div id="popup" style="display:none;" class="popup">
+            <div class="popup-content">
+                <span onclick="closePopup()" class="close">&times;</span>
+                <h3>CGPA Prediction Result</h3>
+                <p id="resultText"></p>
+            </div>
+        </div>
+
+    
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Developed By MD. TARIQUL ISLAM</p>
+    
+        <div class="content-link">
+            <a href="https://web.facebook.com/tariqul.soykot.01" class="footer-icon">
+                <img src="icons/facebook.png" alt="Facebook link">
+            </a>
+    
+            <a href="https://www.instagram.com/tariqul.soykot.001/" class="footer-icon">
+                <img src="icons/instagram.png" alt="Instogam link">
+            </a>
+    
+            <a href="https://www.linkedin.com/in/tar1qul/" class="footer-icon">
+                <img src="icons/Linkedin.png" alt="Linkedin Link">
+            </a>
+    
+            <a href="https://tar1qul.github.io/Portfolio-web-page-design-with-raw-HTML-CSS/" class="footer-icon">
+                <img src="icons/Portfolio.png" alt="Portfolio web page">
+            </a>
+        </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
